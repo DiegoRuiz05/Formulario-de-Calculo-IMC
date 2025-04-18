@@ -23,8 +23,12 @@ public class MeuControlador{
 
     @PostMapping("/RespFormulario")
     public ModelAndView respFormulario(@ModelAttribute("CriacaoFormulario") CalculadoraDeIMC objetoParaCalcularIMC ){
-        // O ModelAttribute faz faz com que o sistema pegue busque o nome que voce deu para o formulario, nesse caso "CriacaoFormulario" e passe para a o objeto da classe criada E preenche os dados automaticamente com dados vazios caso não haja nada no formulario
+        // O ModelAttribute faz com que o sistema pegue busque o nome que voce deu para o formulario, nesse caso "CriacaoFormulario" e passe para o objeto da classe criada E preenche os dados automaticamente com dados vazios caso não haja nada no formulario
         ModelAndView mv = new ModelAndView("RespFormulario"); //carrega o formulario de resposta que foi criado
+
+        double imc = objetoParaCalcularIMC.calcularIMC(); // Assad
+        String status = objetoParaCalcularIMC.statusIMC(); // Assad
+
         mv.addObject("dados", objetoParaCalcularIMC); //// Envia os dados para a nova página com o nome "dados"
         mv.addObject("status", objetoParaCalcularIMC.calcularIMC());
         return mv;

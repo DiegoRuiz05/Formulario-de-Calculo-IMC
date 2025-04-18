@@ -28,8 +28,7 @@ public class CalculadoraDeIMC {
         else if (imc <= 29.9) return "Sobrepeso";
         else if (imc <= 34.9) return "Obesidade grau 1";
         else if (imc <= 39.9) return "Obesidade grau 2";
-        else {return "Obesidade grau 3";
-        }
+        else return "Obesidade grau 3";
     }
 
     public float getPeso() {return peso;}

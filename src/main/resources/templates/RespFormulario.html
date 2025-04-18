@@ -13,6 +13,7 @@
 <p>Altura: <span th:text="${dados.altura}"></span></p>
 <p>Peso: <span th:text="${dados.peso}"></span></p>
 <p>Seu Imc: <span th:text="${#numbers.formatDecimal(status, 1,1)}" ></span></p>
+<p>Status: <span th:text="${status}"></span></p>
 
 <a th:href="@{/Formulario}">Calcular novamente</a>
 
