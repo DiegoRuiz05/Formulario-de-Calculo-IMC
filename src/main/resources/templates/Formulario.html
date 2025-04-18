@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto felas</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+
+    <form action="RespFormulario" th:object="${CriacaoFormulario}" method="POST">
+        <!--   Dentro do formulario eu preciso ter o action que seria para onde ele será redirecionado E o th:object que é o nome de indentificação deste formulario, parecido com um id. E o metodo post para envia-lo -->
+
+
+
+<!--        <div>-->
+<!--            <label for="">Sexo</label>-->
+<!--            <input type="radio" name="masc" id="masc"> Masculino-->
+<!--            <input type="radio" name="femal" id="femal"> Feminino-->
+<!--        </div>-->
+        <label>Altura:</label>
+        <input type="number" step="0.01" th:field="*{altura}" placeholder="Sua altura" /></br>
+<!--        "th:field="*{altura}"  Ela liga esse input ao atributo nome de um objeto Java que foi passado do controlador para a página.-->
+
+
+        <label>Peso:</label>
+        <input type="text" th:field="*{peso}" step="0.01" ><br>
+
+<!--        <label>Idade:</label>-->
+<!--        <input type="number" name="age"> <br>-->
+
+<!--        <button>Reset</button>-->
+
+        <button type="submit">Envia</button>
+
+
+    </form>
+</body>
+</html>
