@@ -12,6 +12,11 @@ body{
     height: 100vh;
 }
 
+h1{
+color: red;
+
+}
+
 form{
     display: flex;
     flex-flow: column;
